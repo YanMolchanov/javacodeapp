@@ -12,7 +12,7 @@ def on_startup():
     md.create_db_and_tables(engine)
 
 
-@myapp.get("/")
+@myapp.get('/')
 async def read_main():
     return {'msg': 'Hello World'}
 
