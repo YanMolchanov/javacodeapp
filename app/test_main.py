@@ -48,7 +48,7 @@ def test_get_invalid_id_balance():
     assert response.status_code == status.HTTP_422_UNPROCESSABLE_ENTITY
     assert response.json() == {"detail":
                                [{'type': 'greater_than_equal',
-                                 'loc': ["path", 'wallet_uuid'],
+                                 'loc': ['path', 'wallet_uuid'],
                                  'msg': 'Input should be greater than or equal to 1',
                                  'input': wallet_uuid,
                                  'ctx': {'ge': 1}}
