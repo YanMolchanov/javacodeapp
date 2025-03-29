@@ -12,7 +12,7 @@ services:
     env_file:
       - ./.env
     environment:
-      - DEBUG # can be empty, debugpy, or pdb
+      - DEBUG 
     depends_on:
       - db
     restart: always
@@ -25,7 +25,5 @@ services:
     ports:
       - "9432:5432"
     volumes:
-    # Store the db data on the host machine, not inside the container.
-    # Put a better path than /tmp!
       - /tmp/postgresql:/var/lib/postgresql
       - /tmp/postgresql/data:/var/lib/postgresql/data
